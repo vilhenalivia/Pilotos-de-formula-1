@@ -18,14 +18,15 @@ function pesquisar()
     let resuldados = "";
     let titulo = "";
     let descricao = "";
-
+    let tags = "";
 
     //Intera sobre cada dado da lista de dados
     for (let dado of dados)
     {
         titulo = dado.titulo.toLowerCase();
         descricao = dado.descricao.toLowerCase();
-
+        tags = dado.tags.toLocaleLowerCase();
+        
         //Se titulo includes campoPesquisa então faça:
         if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa))
         {
